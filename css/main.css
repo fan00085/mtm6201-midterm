@@ -93,6 +93,13 @@ body {
         padding: 0% 4%;
 
     }
+
+    .skip-links a{
+        display: inline-block;
+        position: absolute;
+        left: -99999rem;
+        z-index: 100;
+    }
 /* - - - - - - - - Navigation - - - - - - - - */
 
 

@@ -16,6 +16,12 @@
 <!-- adding id so I can target page specific elements -->
 <body id="home" role="document">
 
+    <!-- skiplinks -->
+    <div class="skip-links">
+        <a href="#main-content" class="skip-link">Skip to Main Content</a>
+        <a href="#footer" class="skip-link">Skip to Footer</a>
+        </div>
+
     <header class="header" role="banner">
         <div class="container">
             <div class="nav">
@@ -113,7 +119,7 @@
         </div>
     </header>
 
-    <main role="main">
+    <main role="main" id="main-content">
         <!-- Dream Home -->
         <div class="container">
              <div class="dream-home" role="region" aria-labelledby="dream-home-heading">
@@ -344,7 +350,7 @@
 
     <!-- Footer -->
      <!-- footer is the same throughout all 3 pages -->
-    <footer>
+    <footer id="footer">
         <div class="container">
             
             <img src="images/icons/logo-icon.png" alt=" Dwello logo" class="logo">
