@@ -1,0 +1,969 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* - - - - - - - - - MY CSS - - - - - - - - - */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FBF5F1;
+    --light-color: #DDC7BB;
+    --dark-color: #2B1B12;
+}
+
+/* Body */
+body {
+    font-family:'Montserrat', sans-serif;
+    background-color: var(--primary-color);
+}
+
+    h1 {
+        font-size: 4.6rem;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        animation: bluhbluh 4s infinite alternate;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p, li, a {
+        font-size: 1rem;
+        color: var(--dark-color);
+        line-height: 160%;
+    }
+
+
+    .container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0% 4%;
+
+    }
+/* - - - - - - - - Navigation - - - - - - - - */
+
+
+/* Nav */
+.nav nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 0% 3%;
+}
+
+.logo img {
+    height: 25px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30%;
+    margin-right: 100px;
+}
+
+ul li {
+    display: inline;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+.search, .profile, .sign-up {
+    display: flex;
+    align-items: center;
+}
+
+.search img, .profile img {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+button {
+    background: var(--dark-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* changes button colour when hovered */
+.nav ul a:hover {
+	color: var(--light-color);
+}
+
+.sign-up button a:hover {
+    color: var(--dark-color);
+}
+
+.sign-up button:hover {
+    background-color: var(--light-color);
+}
+
+/* - - - - - - - - Home - - - - - - - - */
+
+/* Hero/Header */
+#home h1 {
+    margin-top: 10%;
+    width: 50%;
+}
+
+#home .hero-img img {
+    width: 900px;
+    position: absolute;
+    bottom: 0;
+    top: 19px;
+    left: 600px;
+    z-index: -1;
+}
+
+/* adds an animation to the word dream for emphasis */
+
+.twinkle {
+    position: absolute;
+    margin-top: 30px;
+    left: 130px;
+    width: 300px;
+    z-index: -2;
+    animation: twinkle 1s infinite alternate;
+
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+
+/* the hero */
+.hero-desc {
+    width: 30%;
+    font-weight: bold;
+    line-height: 160%;
+    margin-top: 40px;
+}
+
+.hero .sign-up button {
+    margin: 50px 0 100px;
+}
+
+/* Selections */
+
+.selections {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: var(--light-color);
+    padding-bottom: 30px;
+    margin-left: 5%;
+    justify-content: center;
+    width: 85%;
+    border-radius: 10px;
+    margin-bottom: 200px;
+}
+
+input, textarea {
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.location, .type, .price {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.selections input {
+    padding: 10px;
+}
+
+.type-input, .location-input, .price-input{
+    position: absolute;
+}
+
+.location-input {
+    left: 19%;
+}
+
+.type-input {
+    left: 37%;
+}
+
+.price-input {
+    left: 55%;
+}
+
+.selections button {
+    position: absolute;
+    width: 100px;
+    margin-top: 30px;
+    left: 71%;
+}
+
+.location-icon img {
+    z-index: 5;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+}
+
+.type-icon img {
+    position: absolute;
+    left: 48%;
+    top: 100%;
+}
+
+.price-icon img {
+    position: absolute;
+    top: 100%;
+    left: 65.7%;
+}
+
+/* Dream Home */
+
+.dream-img img{
+    width: 595px;
+    border-radius: 18px;
+    position: absolute;
+}
+
+.dream-home h2, .dream-desc{
+    margin-left: 60%;
+    font-weight: bold;
+}
+
+.dream-desc {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 38.5%;
+}
+
+.statistics {
+    margin-left: 600px;
+}
+
+/* the actual numbers such as 8k+ etc */
+.stat-numbers li{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 90px;
+}
+
+/* The specfifics of what the numbers stand for */
+.stat-specifics {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.stat-specifics li {
+    margin-left: 65px;
+    font-weight: bold;
+}
+
+/* choose us */
+
+.choose-us {
+    margin-top: 250px;
+}
+
+.choose-us h2, p {
+    justify-self: center;
+    margin-top: 25px;
+}
+
+.choose-us p {
+    text-align: center;
+    width: 45%;
+}
+
+.reasons {
+    justify-content: center;
+}
+
+.expert-guidance, .personalized-service, .transparent-process, .exceptional-support {
+    background-color: var(--light-color);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 268px;
+}
+
+.ex-img, .per-img, .tra-img, .exc-img {
+    width: 73px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}
+
+.expert-guidance h3, .personalized-service h3, .transparent-process h3, .exceptional-support h3 {
+    font-weight: bold;
+    margin-left: 30px;
+}
+.expert-guidance p, .personalized-service p, .transparent-process p, .exceptional-support p {
+    text-align: left;
+    font-weight: 600;
+    width: 90%;
+    margin-left: 30px;
+}
+
+.reasons {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.reasons img {
+    width: 53px;
+}
+
+/* popular residence */
+
+.bottle {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-content: center;
+}
+
+.san-francisco, .bev-hills, .palo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--light-color);
+    border-radius: 18px;
+}
+
+.villa1, .villa2, .villa3 {
+    max-width: 382px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.san-francisco h3, .bev-hills h3, .palo h3 {
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.bev-hills h3 {
+    margin-right: 20px
+}
+
+.palo h3 {
+    margin-right: 45px;
+}
+
+.locat {
+    position: absolute;
+    align-self: self-start;
+    margin-left: 50px;
+    margin-top: 397px;
+}
+
+/* rooms + ft */
+
+.room-sect-2 {
+    display: flex;
+    width: 100%;
+}
+
+.room-sect-2 img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+}
+
+.rooms {
+    margin-top: 25px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.ft {
+    margin-left: 150px;
+    margin-top: 25px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.room-sect-2 p {
+    width: 150px;
+}
+
+
+.room-sect-3 {
+    padding-bottom: 40px;
+}
+
+.room-sect-3 p {
+    font-weight: bold;
+    padding-top: 10px;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.room-sect-3 .sign-up {
+    position: absolute;
+    margin-right: 200px;
+}
+
+/* what people say */
+
+.people-say h2 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.sarah, .michael, .emily {
+    display: flex;
+    flex-direction: column;
+    width: 382px;
+    height: 530px;
+    border-radius: 18px;
+    background-color: var(--light-color);
+}
+
+.whatpeople {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pe-room {
+    width: 382px;
+    height: 169px;
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.em {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 20px;
+    width: 62px;
+    border-radius: 100%;
+}
+
+.whatpeople h3, h4 {
+    position: absolute;
+}
+
+.whatpeople h3 {
+    margin-top: 210px;
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+.whatpeople h4 {
+    margin-top: 240px;
+    margin-left: 100px;
+    font-weight: 600;
+}
+
+/* Stars */
+
+.rating {
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 59px;
+    height: 24px;
+    border-radius: 4px;
+    margin-top: 230px;
+    margin-left: 300px;
+}
+
+.rating img {
+    position: absolute;
+    margin-top: 2.5px;
+    margin-left: 35px;
+}
+
+.rating p {
+    position: absolute;
+    bottom: 0px;
+    margin-left: 4px;
+    font-weight: 600;
+}
+
+.par {
+    position: absolute;
+    margin-top: 250px;
+    width: 30%;
+}
+
+.par p {
+    text-align: left;
+    margin-right: 50px;
+}
+
+/* left and right */
+
+.leftright {
+    margin-top: 70px;
+    justify-self: center;
+}
+
+.leftright img {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* questions */
+
+.question-sect {
+    margin-top: 150px;
+}
+
+.question-sect h2 {
+    width: 680px;
+    text-align: center;
+    line-height: 140%;
+}
+
+.question-sect img {
+    width: 26px;
+
+}
+
+/* browse and chat */
+.question-sect img {
+    position: absolute;
+}
+
+.browse-chat {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 250px;
+}
+
+.browse-chat p{
+    width: 100%;
+    margin-left: 100px;
+}
+
+.browse-chat img {
+    margin-top: 25px;
+    margin-left: 60px;
+}
+
+
+/* email portion */
+.enter-email {
+    margin-top: 70px;
+    margin-left: 20%;
+}
+
+.enter-email label{
+    display: none;
+}
+
+.enter-email input {
+    position: absolute;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 20px;
+    width: 505px;
+}
+
+.enter-email .send-button {
+    position: absolute;
+    margin-left: 550px;
+}
+
+
+/* - - - - - - - - Footer - - - - - - - - */
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    display: block;
+    background-color: var(--light-color);
+    padding-bottom: 10rem;
+}
+
+footer .container {
+    display: flex;
+}
+
+.footer-nav {
+    display: flex;
+}
+
+footer .logo {
+    margin-top: 50px;
+    position: absolute;
+    display: block;
+    height: fit-content;
+}
+
+footer p {
+    display: flex;
+    margin: 9% 0%;
+    width: 13%;
+    font-weight: bold;
+}
+
+.footer-nav ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    width: 70%;
+}
+
+.footer-nav nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.footer-nav h3 {
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 730;
+    line-height: 50px;
+}
+
+.footer-find, .footer-social {
+    margin-bottom: 50px;
+}
+
+.footer-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* - - - - - - - - - - Agents - - - - - - - - - - */
+
+
+/* Agents opening */
+#our-agents main .container {
+    display: grid;
+}
+
+#our-agents h1 {
+    padding-top: 250px;
+    margin: 0 0 50px;
+}
+
+.agents-opening {
+    margin-bottom: 400px;
+}
+
+.agents-opening p {
+    width: 30%;
+    margin-right: 800px;
+    font-weight: 600;
+}
+
+.team-filler {
+    top: 75px;
+    position: absolute;
+    margin-left: 400px;
+    height: 110%;
+    opacity: 80%;
+    z-index: -2;
+}
+
+/* Agents */
+
+/* Agents H2 */
+.ofa{
+    font-weight: bold;
+    margin-bottom: 30px;
+    justify-self: center;
+    animation: bluhbluh 4s infinite alternate;
+}
+
+/* Makes h2 change colours */
+@keyframes bluhbluh{
+    0% {
+        color: #ff6600;
+    }
+
+    25% {
+        color: #a96541;
+    }
+
+    75% {
+        color: #6a2d05;
+    }
+
+    100% {
+        color: var(--dark-color);
+    }
+}
+
+/* Agent cards */
+.agents {
+    background-color: #DDC7BB;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    max-height: 800px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.agents h2 {
+    margin: 20px;
+    align-self: center;
+}
+
+.agents h3 {
+    font-weight: 500;
+    align-self: center;
+    margin: 0 20px;
+}
+
+.agents p {
+    margin: 20px;
+}
+
+.agents img {
+    border-radius: 4px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.artie, .candy, .ernald {
+    margin: 60px;
+    background-color: #FBF5F1;
+    width: 300px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.agents ul {
+    margin: 20px;
+    padding-bottom: 10px;
+    margin-top: auto;
+}
+
+.agents li {
+    cursor: pointer;
+}
+
+.agents li:hover, a:hover {
+    color: var(--light-color);
+
+}
+
+/* Grid */
+
+main .container .agents {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* - - - - - - - - - - Contact - - - - - - - - - - */
+
+#contact-us main .container {
+    display: flex;
+}
+
+#contact-us h1 {
+    padding-top: 100px;
+    margin-left: 650px;
+}
+
+.contact-open {
+    margin-bottom: 400px;
+}
+
+.contact-filler {
+    top: 75px;
+    position: absolute;
+    margin-right: 100%;
+    height: 90%;
+    opacity: 80%;
+    z-index: -3;
+}
+
+/* Phone and email */
+
+.phonemail ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 670px;
+    top: 320px;
+}
+
+.phonemail ul li {
+    line-height: 40px;
+}
+
+/* Message */
+
+main .container {
+    padding-bottom: 300px;
+}
+
+#contact-us h2 {
+    display: flex;
+    position: absolute;
+    width: 40%;
+    margin-left: 660px;
+    bottom: 250px;
+}
+
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 665px;
+    top: 500px;
+    gap: 20px;
+    background-color: var(--light-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contact-input input{
+    margin-top: 10px;
+    width: 440px;
+    padding: 7px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-textarea textarea{
+    margin-top: 10px;
+    width: 440px;
+    padding: 7px;
+    resize: none;
+    font-family:'Montserrat', sans-serif
+}
+
+/* Message button */
+
+.send-button button {
+    background: var(--dark-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-button button a {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.send-button button a:hover {
+    color: var(--dark-color);
+}
+
+.send-button button:hover {
+    background-color: var(--light-color);
+}
+
+/* End */
