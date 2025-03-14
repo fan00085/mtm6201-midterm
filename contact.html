@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +13,20 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body id="contact-us">
+<!-- adding id so I can target page specific elements -->
+<body id="contact-us" role="document">
     
-    <header>
+    <header role="banner">
         <div class="container">
             <div class="nav">
                 <!-- Navigation -->
-                <nav>
+                 <!-- same for all 3 pages -->
+                <nav role="navigation" aria-label="Main Navigation">
                     <div class="logo">
                         <img src="images/icons/header-logo-icon.png" alt="logo">
                     </div>
 
-                    <ul>
+                    <ul role="menubar">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="">Service</a></li>
                         <li><a href="agents.html">Agents</a></li>
@@ -33,7 +35,7 @@
 
 
                     <div class="nav-right">
-                        <div class="search">
+                        <div class="search" role="search">
                             <img src="images/icons/search-icon.png" alt="search">
                         </div>
 
@@ -42,7 +44,7 @@
                         </div>
 
                         <div class="sign-up">
-                            <button>Sign up</button>
+                            <button role="button">Sign up</button>
                         </div>                    
                     </div>
                 </nav>
@@ -50,19 +52,21 @@
 
             <div class="contact-open">
                 <h1>Contact Us</h1>
+                <!-- just filler doesnt need an alt -->
                 <img src="images/ext/Contact-filler-img.png" alt="" class="contact-filler">
             </div>
             </div>
     </header>
 
-    <main>
+    <main role="main">
         <div class="container">
 
             <!-- Contact us via email/phone -->
-            <div class="phonemail">
+             <!-- just text -->
+            <div class="phonemail" itemscope itemtype="https://schema.org/Organization">
                  <ul>
-                    <li><i class="fa-solid fa-phone"></i> 000-000-0000</li>
-                    <li><i class="fa-solid fa-envelope"></i> housingagents@dwello.com</li>
+                    <li><i class="fa-solid fa-phone"></i><span itemprop="telephone">000-000-0000</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> <span itemprop="email">housingagents@dwello.com</span></li>
                 </ul>
             </div>
             
@@ -70,26 +74,27 @@
             <div class="msg">
                 <h2>Or leave us a message:</h2>
 
-                <form class="contact-form">
+                <form class="contact-form" role="form" itemscope itemtype="https://schema.org/ContactForm">
 
                     <div class="contact-input">
                         <label for="name">Full Name</label><br>
-                        <input type="text" name="name" id="name" placeholder="Full Name">
+                        <input type="text" name="name" id="name" placeholder="Full Name" itemprop="name">
                         
                     </div>
 
                     <div class="contact-input">
                         <label for="email">Email</label><br>
-                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="email" name="email" id="email" placeholder="Email" itemprop="email">
                     </div>
 
                     <div class="contact-textarea">
                         <label for="message">Message</label><br>
-                        <textarea name="message" id="message" rows="5" placeholder="Your message here"></textarea>
+                        <!-- br so it doesnt go side by side instead of ontop -->
+                        <textarea name="message" id="message" rows="5" placeholder="Your message here" itemprop="message"></textarea>
                     </div>
 
                     <div class="send-button">
-                        <button>Send</button>
+                        <button role="button">Send</button>
                     </div>
                 
                 </form>
@@ -102,11 +107,9 @@
         <div class="container">
             
             <img src="images/icons/logo-icon.png" alt=" Dwello logo" class="logo">
-
-            
             <p>Bringing you closer to your dream home, one click at a time.</p>
             <!-- Footer navigation -->
-            <div class="footer-nav">
+            <div class="footer-nav"  aria-label="Footer Navigation">
             <nav class="footer-ab">
                     <h3>About</h3>
                     <ul>

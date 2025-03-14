@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +13,20 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body id="home">
+<!-- adding id so I can target page specific elements -->
+<body id="home" role="document">
 
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <div class="nav">
                 <!-- Navigation -->
                  <!-- navigation is same across all three pages -->
-                <nav>
+                <nav role="navigation" aria-label="Main Navigation">
                     <div class="logo">
                         <img src="images/icons/header-logo-icon.png" alt="logo">
                     </div>
 
-                    <ul>
+                    <ul role="menubar">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="">Service</a></li>
                         <li><a href="agents.html">Agents</a></li>
@@ -33,7 +34,7 @@
                     </ul>
 
                     <div class="nav-right">
-                        <div class="search">
+                        <div class="search" role="search">
                             <img src="images/icons/search-icon.png" alt="search">
                         </div>
 
@@ -42,14 +43,14 @@
                         </div>
 
                         <div class="sign-up">
-                            <button class="sign-up-button">Sign up</button>
+                            <button class="sign-up-button" role="button">Sign up</button>
                         </div>
                     </div>
                 </nav>
             </div>
 
             <!-- Hero -->
-            <div class="hero">
+            <div class="hero" role="region" aria-labelledby="hero-heading">
 
                 <!-- for animation use -->
                 <img src="images/icons/twinkle-icon.png" alt="" class="twinkle">
@@ -61,10 +62,10 @@
 
                 <!-- all signup buttons are the same across all 3 pages -->
                 <div class="sign-up">
-                    <button>Sign up</button>
+                    <button role="button">Sign up</button>
                 </div>
 
-                <div class="hero-img"><img src="images/ext/hero-img.png" alt="Hero image"></div>
+                <div class="hero-img"><img src="images/ext/hero-img.png" alt="Hero image" role="img"></div>
             </div>
 
             <!-- Selections for specific housing types -->
@@ -106,16 +107,16 @@
                 </div>
                 <!-- signup -->
                 <div class="sign-up">
-                    <button>Sign up</button>
+                    <button role="button">Sign up</button>
                 </div>
              </div>
         </div>
     </header>
 
-    <main>
+    <main role="main">
         <!-- Dream Home -->
         <div class="container">
-             <div class="dream-home">
+             <div class="dream-home" role="region" aria-labelledby="dream-home-heading">
                 <div class="dream-img">
                     <img src="images/ext/dreamhome-img.jpg" alt="dream home">
                 </div>
@@ -126,7 +127,7 @@
                 
                 <div class="statistics">
                     <!-- numbers -->
-                    <ul class="stat-numbers">
+                    <ul class="stat-numbers" role="list">
                         <li>8K+</li>
                         <li>6k+</li>
                         <li>2k+</li>
@@ -148,7 +149,7 @@
                 <p>Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service</p>
 
                 <div class="reasons">
-                    <div class="expert-guidance">
+                    <div class="expert-guidance" role="article">
                         <!-- added div to img so I can add background and padding without interfering with the image size -->
                         <div class="ex-img">
                         <img src="images/icons/map-icon.png" alt=""></div>
@@ -156,32 +157,32 @@
                         <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
                     </div>
 
-                    <div class="personalized-service">
+                    <div class="personalized-service" role="article">
                         <div class="per-img">
                         <img src="images/icons/person-icon.png" alt=""></div>
                         <h3>Personalized Service</h3>
                         <p>Our services adapt to your unique needs, making your journey stress-free</p>
                     </div>
 
-                    <div class="transparent-process">
+                    <div class="transparent-process" role="article">
                         <div class="tra-img"><img src="images/icons/clipboard-icon.png" alt=""></div>
                         <h3>Transparent Process</h3>
                         <p>Stay informed with our clear and honest approach to buying your home</p>
                     </div>
 
-                    <div class="exceptional-support">
+                    <div class="exceptional-support" role="article">
                         <div class="exc-img"><img src="images/icons/handshake-icon.png" alt=""></div>
                         <h3>Exceptional Support</h3>
                         <p>Providing peace of mind with our responsive and attentive customer service</p>
                     </div>
                 </div>
 
-                <div class="popular-res">
+                <div class="popular-res" role="region" aria-labelledby="popular-res-heading">
 
                     <h2>Our Popular Residences</h2>
                     <!-- San francisco -->
                      <!-- bottle div controls all three cards so I can add grid -->
-                     <div class="bottle">
+                     <div class="bottle" role="list">
                     <div class="san-francisco">
                         <img class="villa3" src="images/ext/modernvilla3-img.png" alt="villa san francisco">
 
@@ -198,7 +199,7 @@
                             
                             <div class="room-sect-3">
                             <div class="sign-up">
-                                <button>Sign up</button>
+                                <button role="button">Sign up</button>
                             </div>
                             <p>$2,500,000</p>
                             </div>
@@ -222,7 +223,7 @@
 
                             <div class="room-sect-3">
                             <div class="sign-up">
-                                <button>Sign up</button>
+                                <button role="button">Sign up</button>
                             </div>
                             <p>$850,000</p>
                             </div>
@@ -246,7 +247,7 @@
 
                             <div class="room-sect-3">
                             <div class="sign-up">
-                                <button>Sign up</button>
+                                <button role="button">Sign up</button>
                             </div>
                             <p>$3,700,000</p>
                             </div>
@@ -256,12 +257,12 @@
                 </div>
 
                 <!-- About Dwello -->
-                <div class="people-say">
+                <div class="people-say" role="region" aria-labelledby="people-title">
                     <h2>What People Say About Dwello</h2>
                     <!-- whatpeople div makes it so I can do grid -->
-                    <div class="whatpeople">
+                    <div class="whatpeople" role="list">
                     <!-- Sarah -->
-                    <div class="sarah">
+                    <div class="sarah" role="listitem">
                         <!-- pre-room div makes it so I can edit the picture all at once in css -->
                         <img src="images/int/greymaster-img.jpg" alt="" class="pe-room">
                         <!-- em div makes it so I can controll all profile pictures during css at once -->
@@ -278,7 +279,7 @@
                     </div>
 
                     <!-- Michael -->
-                    <div class="michael">
+                    <div class="michael" role="listitem">
                         <img src="images/int/greyliving-img.jpg" alt="" class="pe-room">
                         <img src="images/profile/guy-img.jpg" alt="Michael Rodriguez" class="em">
                         <h3>Michael Rodriguez</h3>
@@ -291,7 +292,7 @@
                         <p>I had a fantastic experience working with Dwello. Their expertise and personalized service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!</p> </div>
                     </div>
 
-                    <div class="emily">
+                    <div class="emily" role="listitem">
                         <img src="images/int/greybed-img.jpg" alt="" class="pe-room">
                         <img src="images/profile/blondegirl-img.jpg" alt="Emily Johnson" class="em">
                         <h3>Emily Johnson</h3>
@@ -310,17 +311,17 @@
                 </div>
                 </div>
 
-                <div class="question-sect">
+                <div class="question-sect" role="region" aria-labelledby="question-area">
                     <h2>Do You Have Any Questions?
                     Get Help From Us</h2>
 
                     <!-- Chat live with support -->
-                     <div class="browse-chat">
-                    <div class="chat-sup">
+                     <div class="browse-chat" role="list">
+                    <div class="chat-sup" role="listitem">
                         <img src="images/icons/verification-icon.png" alt="" class="chat-live"> <p>Chat live with our support team</p>
                     </div>
                     <!-- Browse FAQ -->
-                    <div class="browse-faq">
+                    <div class="browse-faq" role="listitem">
                         <img src="images/icons/verification-icon.png" alt="" class="FAQ"> <p>Browse our FAQ</p>
                     </div>
                 </div>
@@ -331,7 +332,7 @@
                             <label for="email">Email</label>
 
                             <div class="send-button">
-                                <button type="submit">Submit</button>
+                                <button type="submit" role="button">Submit</button>
                             </div>
                     </div>
 
@@ -349,7 +350,7 @@
             <img src="images/icons/logo-icon.png" alt=" Dwello logo" class="logo">
             <p>Bringing you closer to your dream home, one click at a time.</p>
             <!-- Footer navigation -->
-            <div class="footer-nav">
+            <div class="footer-nav"  aria-label="Footer Navigation">
             <nav class="footer-ab">
                     <h3>About</h3>
                     <ul>

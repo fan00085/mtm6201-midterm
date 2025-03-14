@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +13,21 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body id="our-agents">
+
+<!-- adding id so I can target page specific elements -->
+<body id="our-agents" role="document">
     
-    <header>
+    <header role="banner">
         <div class="container">
             <div class="nav">
                 <!-- Navigation -->
-                <nav>
+                 <!-- nav is the same -->
+                <nav role="navigation" aria-label="Main Navigation">
                     <div class="logo">
                         <img src="images/icons/header-logo-icon.png" alt="logo">
                     </div>
 
-                    <ul>
+                    <ul role="menubar">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="">Service</a></li>
                         <li><a href="agents.html">Agents</a></li>
@@ -33,7 +36,7 @@
 
 
                     <div class="nav-right">
-                        <div class="search">
+                        <div class="search" role="search">
                             <img src="images/icons/search-icon.png" alt="search">
                         </div>
 
@@ -42,12 +45,14 @@
                         </div>
 
                         <div class="sign-up">
-                            <button>Sign up</button>
-                        </div>                    </div>
+                            <button role="button">Sign up</button>
+                        </div>
+                    </div>
                 </nav>
 
                 
-            <div class="agents-opening">
+            <div class="agents-opening" role="region" aria-labelledby="agents-heading">
+                <!-- adding div so I can control only the hero part in css -->
                 <h1>Our Agents</h1>
                 <p>Our agents are highly skilled with many years of experience with a variety of clients. If there is a want, our agents can deliver.
                 </p>
@@ -60,64 +65,65 @@
         
     </header>
 
-    <main>
+    <main role="main">
         <div class="container">
 
+            <!-- ofa is our featured agents, added so I can target this h2 only easier -->
             <h2 class="ofa">Featured Agents</h2>
             <!-- Agents -->
-            <div class="agents">
+            <div class="agents" role="list">
 
                 <!-- Agent 1 -->
-                <div class="artie">
-                    <img src="images/profile/agent1-img.jpg" alt="Artie Barn">
+                <div class="artie" itemscope itemtype="https://schema.org/RealEstateAgent" role="listitem">
+                    <img src="images/profile/agent1-img.jpg" alt="Artie Barn" itemprop="image">
 
-                    <h2>Artie Barn</h2>
-                    <h3>San Francisco</h3>
+                    <h2 itemprop="name">Artie Barn</h2>
+                    <h3 itemprop="address">San Francisco</h3>
 
-                    <p>
+                    <p itemprop="description">
                         Artie Barn is a housing agents who can land any new homeowner a place to live without the abbundance of stress. Stationed at San Francisco, Artie has been able to help many new home owners find their first place to live.
                     </p>
                     
                     <!-- Social media -->
                      <ul>
-                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
-                        <li><i class="fa-solid fa-envelope"></i>Artie.Barnes@Dwello.com</li>
+                        <li><a href="https://www.linkedin.com/" itemprop="sameAs"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                        <li><i class="fa-solid fa-envelope"></i><span itemprop="email">Artie.Barnes@Dwello.com</span></li>
                      </ul>
                 </div>
 
                 <!-- Agent 2 -->
-                <div class="candy">
-                    <img src="images/profile/agent2-img.jpg" alt="Candy Davis">
+                <div class="candy" itemscope itemtype="https://schema.org/RealEstateAgent" role="listitem">
+                    <img src="images/profile/agent2-img.jpg" alt="Candy Davis" itemprop="image">
 
-                    <h2>Candy Davis</h2>
-                    <h3>Los Angeles</h3>
+                    <h2 itemprop="name">Candy Davis</h2>
+                    <h3 itemprop="address">Los Angeles</h3>
 
-                    <p>
+                    <p itemprop="description">
                         Candy Davis is a professional housing agent who can find and lock in anyone's dream home. Stationed at Los Angeles, she has been able to give many their dream home they could only have imagined before.
                     </p>
                     
                     <!-- Social media -->
                      <ul>
-                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
-                        <li><i class="fa-solid fa-envelope"></i>Candy.Davis@Dwello.com</li>
+                        <li><a href="https://www.linkedin.com/" itemprop="sameAs"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                        <li><i class="fa-solid fa-envelope"></i><span itemprop="email">Candy.Davis@Dwello.com</span></li>
                      </ul>
                 </div>
 
                 <!-- Agent 3 -->
-                <div class="ernald">
-                    <img src="images/profile/agent3-img.jpg" alt="Ernald Fru">
+                <div class="ernald" itemscope itemtype="https://schema.org/RealEstateAgent" role="listitem">
+                    <img src="images/profile/agent3-img.jpg" alt="Ernald Fru"itemprop="image">
 
-                    <h2>Ernald Fru</h2>
-                    <h3>Manitoba</h3>
+                    <h2 itemprop="name">Ernald Fru</h2>
+                    <h3 itemprop="address">Manitoba</h3>
 
-                    <p>
+                    <p itemprop="description">
                         Ernald Fru is a house agent who is able to land a home for a price. He's given her clients a home for a price.
                     </p>
                     
                     <!-- Social media -->
                      <ul>
-                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
-                        <li><i class="fa-solid fa-envelope"></i>Ernald.Fru@Dwello.com</li>
+                        <li><a href="https://www.linkedin.com/" itemprop="sameAs"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                        <li><i class="fa-solid fa-envelope"></i><span itemprop="email">Ernald.Fru@Dwello.com</span></li>
                      </ul>
                 </div>
             </div>
@@ -131,7 +137,7 @@
             <img src="images/icons/logo-icon.png" alt=" Dwello logo" class="logo">
             <p>Bringing you closer to your dream home, one click at a time.</p>
             <!-- Footer navigation -->
-            <div class="footer-nav">
+            <div class="footer-nav"  aria-label="Footer Navigation">
             <nav class="footer-ab">
                     <h3>About</h3>
                     <ul>
@@ -171,7 +177,6 @@
             </div>
         </div>
     </footer>
-
 
 </body>
 </html>

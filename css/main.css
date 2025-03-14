@@ -279,19 +279,19 @@ input, textarea {
 .location-icon img {
     z-index: 5;
     position: absolute;
-    top: 100%;
+    top: 101.3%;
     left: 30%;
 }
 
 .type-icon img {
     position: absolute;
     left: 48%;
-    top: 100%;
+    top: 101.3%;
 }
 
 .price-icon img {
     position: absolute;
-    top: 100%;
+    top: 101.3%;
     left: 65.7%;
 }
 
